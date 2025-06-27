@@ -14,11 +14,5 @@
     }
   },
   "onCreateCommand": "chmod +x .devcontainer/*.sh && .devcontainer/on-create-command.sh",
-  "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/pipx:1": {
-      "packages": "uv"
-    }
-  },
   "postCreateCommand": ".devcontainer/post-create-command.sh"
 }
