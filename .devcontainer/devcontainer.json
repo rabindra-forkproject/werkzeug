@@ -4,7 +4,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
         "python.terminal.activateEnvInCurrentTerminal": true,
         "python.terminal.launchArgs": [
           "-X",
@@ -13,5 +13,12 @@
       }
     }
   },
-  "onCreateCommand": ".devcontainer/on-create-command.sh"
+  "onCreateCommand": ".devcontainer/on-create-command.sh",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/pipx:1": {
+      "packages": "uv"
+    }
+  },
+  "postCreateCommand": ".devcontainer/post-create-command.sh"
 }
